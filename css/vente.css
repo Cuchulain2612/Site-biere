@@ -1,0 +1,116 @@
+body{
+    background-color:lightcoral;
+}
+
+header{
+    background-color: dimgrey;
+}
+
+
+footer{
+    background-color: dimgrey;
+    clear: both;
+}
+
+div.logo{
+    width:15%;
+    float: left;
+}
+
+img.logo{
+    width:100%;
+    border: 1px solid darkgray
+}
+
+ul.navPrim li{
+    display:inline;
+    list-style-type: none;
+    font-size: 100px;
+    color:white;
+    
+}
+
+ul.navPrim a:link,ul.navPrim a:visited{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    margin: 2px;
+    border: 3px solid darkred;
+}
+
+
+
+div.navigation{
+    float: left;
+}
+
+main{
+    clear: left;
+}
+
+div.demandeAge{
+    position: fixed ;
+    top: 40%;   /* verifier avec le margin et padding -> plus tard */
+    left:32%;    /* calcul à faire pour la position parfaite*/
+    border: 3px solid black;
+    text-align: center;
+    padding: 10px ;
+    width: 40%;
+    background-color: darkred;
+}
+
+div.logoAge{
+    width: 15%;
+    padding: 0;
+    border: 3px solid darkred;   /* problème pas aligné*/
+    position: relative;
+    top: 5px;
+    left: 43%;     /* verifier position avec padding et margin */
+}
+
+a.loi{
+    font-size: 20px;
+    font-style: italic;
+}
+a:link.loi, a:visited.loi{
+    color: darksalmon;
+}
+
+a:link.retourMain, a:visited.retourMain{
+    color: darksalmon;
+    font-weight: bold;
+}
+
+
+figcaption.titreBiere{
+    color: white;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;   /* trouver autre manière */
+    text-align: center;
+    font-weight: 300;
+}
+
+
+
+div.cadreUn{
+    float: left;
+    width: 50%;
+}
+
+div.cadreDeux{
+    float: left;
+    width: 50%;
+}
+
+img.imageBiere{
+    width: 100%;
+}
+
+
+
+
+
+
+/* à modifier et mettre au propre */ 
+/* revoir les positionnements en prenant en compte les padding et margin, etc. */

@@ -1,0 +1,52 @@
+body{
+    background-color:#49A94A;
+}
+
+header{
+    background-color: dimgrey;
+}
+
+
+footer{
+    background-color: dimgrey;
+}
+
+div.logo{
+    width:6%;
+    float: left;
+}
+
+img.logo{
+    width:100%;
+    border: 1px solid black;
+}
+
+ul.navPrim li{
+    display:inline;
+    list-style-type: none;
+    font-size: 40px;
+    color:white;
+    
+}
+
+ul.navPrim a:link,ul.navPrim a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+div.navigation{
+    float: left;
+    width: 40%;
+}
+div.reseaux{
+    float: left;
+    width: 40%;
+}
+
+div.main{
+    clear: left;
+}
+
+/* à modifier et mettre au propre */ 
