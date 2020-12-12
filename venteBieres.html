@@ -9,16 +9,19 @@
     <body >
         <!--Header-->
         <header>
-            <div class="logo"><img src="logo.png" alt="Logo de la brasserie Marjolaine. Représente un loup avec des ailes et des bois de cerf." class="logo"></div>
-            <div class="navigation">
-                <nav>
-                    <ul  class="navPrim">  <!--Type à changer, on doit faire ça via css--> <!-- Dans CSS -> display:inline; (permets de tout mettre sur une ligne)-->
-                        <li><a href="main.html"> Acceuil </a></li>
-                        <li><a href="listeBieres.html"> Nos bières </a></li>
-                        <li><a href="contact.html"> Contact </a></li>
-                        <li><a href="venteBieres.html" > Boutique </a></li>
-                    </ul>  
-                </nav>
+            <div class="hautPage">   <!-- n'englobe pas , pk?-->
+                <img src="logo.png" alt="Logo de la brasserie Marjolaine. Représente un loup avec des ailes et des bois de cerf." class="logo">
+                <div class="navigation">
+                    <nav>
+                        <ul  class="navPrim">  <!--Type à changer, on doit faire ça via css--> <!-- Dans CSS -> display:inline; (permets de tout mettre sur une ligne)-->
+                            <li><a href="main.html"> Acceuil </a></li>
+                            <li><a href="listeBieres.html"> Nos bières </a></li>
+                            <li><a href="contact.html"> Contact </a></li>
+                            <li><a href="venteBieres.html" > Boutique </a></li>
+                            <li><a href="panier.html" ><img src="panier.png" class="panier"> </a></li>
+                        </ul>  
+                    </nav>
+                </div>
             </div>
         </header>
         <!--Main-->
@@ -32,14 +35,23 @@
             <div class="vente">
                 <div class="doubleCadre">
                     <div class="cadreUn">
-                        <a href=""><figure><img src="typesBieres/typeBiere1.png" class="imageBiere"><figcaption class="titreBiere">Deuxième bière de la brasserie</figcaption></figure></a>
+                        <figure><a href="" class="lienBeer"><img src="typesBieres/typeBiere1.png" class="imageBiere"></a><figcaption class="titreBiere">Première bière de la brasserie<button class="plusMoins" onclick="ajouterPanier(panierCourse.beerUn);">+</button> <button class="plusMoins" onclick="retirerPanier(panierCourse.beerUn);">-</button> </figcaption></figure>
                     </div>
                     <div class="cadreDeux">
-                        <a href=""><figure><img src="typesBieres/typeBiere2.png" class="imageBiere"><figcaption class="titreBiere">Deuxième bière de la brasserie</figcaption></figure></a>
-                    </div>
+                        <figure><a href="" class="lienBeer"><img src="typesBieres/typeBiere2.png" class="imageBiere"></a><figcaption class="titreBiere">Deuxième bière de la brasserie<button class="plusMoins" onclick="ajouterPanier(panierCourse.beerDeux);">+</button> <button class="plusMoins" onclick="retirerPanier(panierCourse.beerDeux);">-</button> </figcaption></figure>                    
                 </div>
+                <div class="doubleCadre">
+                    <div class="cadreUn">
+                        <figure><a href="" class="lienBeer"><img src="typesBieres/typeBiere3.png" class="imageBiere"></a><figcaption class="titreBiere">Troisième bière de la brasserie<button class="plusMoins" onclick="ajouterPanier(panierCourse.beerTrois);">+</button> <button class="plusMoins" onclick="retirerPanier(panierCourse.beerTrois);">-</button> </figcaption></figure>
+                    </div>
+                    <div class="cadreDeux">
+                        <figure><a href="" class="lienBeer"><img src="typesBieres/typeBiere4.png" class="imageBiere"></a><figcaption class="titreBiere">Quatrième bière de la brasserie<button class="plusMoins" onclick="ajouterPanier(panierCourse.beerQuatre);">+</button> <button class="plusMoins" onclick="retirerPanier(panierCourse.beerQuatre);">-</button> </figcaption></figure>                    
+                </div>
+                
 
             </div>
+
+            <button onclick="afficherPanierTest();">Afficher vite panier</button>
         </main>
         <!--Footer-->
         <footer>

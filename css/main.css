@@ -9,38 +9,54 @@ header{
 
 footer{
     background-color: dimgrey;
+    clear: both;
 }
 
-div.logo{
-    width:6%;
-    float: left;
+div.hautPage{
+    background-color: darkred;
 }
 
 img.logo{
-    width:100%;
-    border: 1px solid black;
+    width:15%;
+    border: 1px solid darkgray;
+    float:left;
+
+}
+
+img.panier{
+    width: 5%;
 }
 
 ul.navPrim li{
     display:inline;
     list-style-type: none;
-    font-size: 40px;
+    font-size: 500%;     /* Verifier comment faire taille en fonction de la fenêtre */
     color:white;
+    margin: 5px;
     
 }
 
 ul.navPrim a:link,ul.navPrim a:visited{
     color: white;
     text-decoration: none;
+    padding: 5px;
+    margin: 2px;
+    border: 3px solid rgb(8, 117, 5);
 }
-
 
 
 div.navigation{
     float: left;
+    width: 80%;
+    background-color: rgb(58, 156, 49);
+}
+
+div.reseaux{
+    float: right;
     width: 40%;
 }
-div.reseaux{
+
+div.contact{
     float: left;
     width: 40%;
 }

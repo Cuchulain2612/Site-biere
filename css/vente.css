@@ -12,21 +12,27 @@ footer{
     clear: both;
 }
 
-div.logo{
-    width:15%;
-    float: left;
+div.hautPage{
+    background-color: darkred;
 }
 
 img.logo{
-    width:100%;
-    border: 1px solid darkgray
+    width:15%;
+    border: 1px solid darkgray;
+    float:left;
+
+}
+
+img.panier{
+    width: 5%;
 }
 
 ul.navPrim li{
     display:inline;
     list-style-type: none;
-    font-size: 100px;
+    font-size: 500%;     /* Verifier comment faire taille en fonction de la fenêtre */
     color:white;
+    margin: 5px;
     
 }
 
@@ -42,6 +48,8 @@ ul.navPrim a:link,ul.navPrim a:visited{
 
 div.navigation{
     float: left;
+    width: 80%;
+    background-color: rgb(173, 36, 36);
 }
 
 main{
@@ -81,15 +89,16 @@ a:link.retourMain, a:visited.retourMain{
     font-weight: bold;
 }
 
-
-figcaption.titreBiere{
+a.lienBeer{
+    text-decoration: none;
+    font-size: 200%;     /* attention ne s'adapte pas !!!! */
     color: white;
-    font-size: 30px;
+    font-weight: 400;
     font-family: 'Courier New', Courier, monospace;
-    text-decoration: none;   /* trouver autre manière */
     text-align: center;
-    font-weight: 300;
 }
+
+
 
 
 
@@ -105,6 +114,31 @@ div.cadreDeux{
 
 img.imageBiere{
     width: 100%;
+}
+
+button.plusMoins{
+    text-align: center;
+    padding: 0 6px 0 6px;
+    margin: 0 0 0 10px;
+    color: white;
+    background-color: rgb(168, 60, 60);
+    font-size: 200%;
+    
+}
+
+figcaption{
+    margin-top: 10px;
+    padding: 5px;
+}
+
+div.reseaux{
+    float: right;
+    width: 40%;
+}
+
+div.contact{
+    float: left;
+    width: 40%;
 }
 
 
