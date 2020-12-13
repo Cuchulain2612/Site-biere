@@ -8,3 +8,12 @@ Un fichier javascript et deux fichiers CSS.
 
 Aucun de ces fichiers ne sont définitifs, loin de là.
 
+Problèmes à résoudre:
+- cookies ne marchent pas
+- onload html n'arrive pas à chercher des valeurs dans le fichier html
+- l'affichage du tableau dans le panier pas bon.
+- Police en fonction de la taille de la fenêtre???
+- empecher un retour à la ligne dans la navigation
+
+
+ATTENTION: remettre au propre et de manière plus lisible.

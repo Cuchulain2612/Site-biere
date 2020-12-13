@@ -5,8 +5,26 @@
         <title></title>
         <script src=""></script>   <!--lien Javascript-->
         <link rel="stylesheet" type="text/css" href="css/main.css">  <!--lien CSS-->
+        <script>
+            var panierCourse={
+            beerUn:{nombre:0, prix:2.5},
+            beerDeux:{nombre:0, prix:3},
+            beerTrois:{nombre:0, prix:2},
+            beerQuatre:{nombre:0, prix:1.75},
+            }
+            function creerTablePanier(){
+                let clefs=Object.keys(panierCourse);
+                for(let i of clefs){
+                    let objet= panierCourse[i];
+                    let nombre=  panierCourse[i].nombre;
+                    let prix= panierCourse[i].prix;
+                    document.getElementById("objetPanier").innerHTML+= "<tr> <td>objet</td><td>nombre</td><td>prix</td> </tr>";
+                }
+                
+            }
+        </script>
     </head>
-    <body>
+    <body onload="creerTablePanier()">
         <!--Header-->
         <header>
             <div class="hautPage">
@@ -17,7 +35,7 @@
                             <li><a href="main.html"> Acceuil </a></li>
                             <li><a href="listeBieres.html"> Nos bières </a></li>
                             <li><a href="contact.html"> Contact </a></li>
-                            <li><a href="venteBieres.html" > Boutique </a></li>
+                            <li><a href="verifage.html" > Boutique </a></li>
                             <li><a href="" ><img src="panier.png" class="panier"> </a></li>
                         </ul>  
                     </nav>
@@ -32,13 +50,31 @@
                     Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
                 </p>
             </div>
+            
+
+            <h2>Votre commande:</h2>
+        <table class="tableauPanier">
+            <thead class="tableauPanier">
+                <tr class="tableauPanier">
+                    <th>Article</th>
+                    <th>Quantitée</th>
+                    <th>Prix</th>
+                </tr>
+            </thead>
+            <tbody id="objetPanier" >
+                
+            </tbody>
+        </table>
+
         </main>
+
+        
         <!--Footer-->
         <footer>
             
             <div class="contact">
                 <p>
-                    <h3>Prenez contact avec nous:</h3> <br>
+                    <h4>Prenez contact avec nous:</h4> <br>
                     <a href="contact.html">Via notre formulaire de contact</a> <br>
                     Via notre mail: ... <br>
 
@@ -47,7 +83,7 @@
 
             <div class="reseaux">
                 <p>
-                    <h3>Nos réseaux:</h3>
+                    <h4>Nos réseaux:</h4>
                     Twitter:..... <br>
                     Facebook:..... <br>
                     Youtube:...... <br>

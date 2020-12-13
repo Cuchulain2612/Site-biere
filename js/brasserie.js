@@ -1,12 +1,17 @@
 "use strict"
 
+// document.cookie="test=234; coucou=241";
+// var cookieUn=document.cookie;
+
+
+
 const ageAlcool=16;   // à transformer en millisecondes pour le if
 
 var panierCourse={
-    beerUn:{nombre:0},
-    beerDeux:{nombre:0},
-    beerTrois:{nombre:0},
-    beerQuatre:{nombre:0},
+    beerUn:{nombre:0, prix:2.5},
+    beerDeux:{nombre:0, prix:3},
+    beerTrois:{nombre:0, prix:2},
+    beerQuatre:{nombre:0, prix:1.75},
 }
 
 function verifAge() {
@@ -14,11 +19,11 @@ function verifAge() {
     let age= new Date()- new Date(naissance);   // résultat en millisecondes
     let ageAlcoolMilli=ageAlcool*365*24*60*60*1000; // transforme ageAlcool en millisecondes
     if ((age/ageAlcoolMilli)>=1) {
-        //redirection("../venteBieres.html");   // envoie sur une nouvelle page, ne fonctionne pas depuis ce fichier mais fonctionne en console. Ne fonctionne pas.
+        //redirection("venteBieres.html");   // envoie sur une nouvelle page, ne fonctionne pas depuis ce fichier mais fonctionne en console. Ne fonctionne pas.
         document.getElementById("messageVerifAge").innerHTML="<h1> Accès autorisé </h1> <br> <a href= \"venteBieres.html\" class=retourMain> Poursuivre vers la boutique </a>";
     }
     else{
-        document.getElementById("messageVerifAge").innerHTML= "<h1> Accès refusé </h1> <br> <p>Vous devez avoir 16 and pour acheter de l'alcool en belgique. <br> <a href=\" https://www.ejustice.just.fgov.be/cgi_loi/loi_a.pl\" class=\"loi\" > Règles sur l'achat d'alcool en Belgique</a> </p>  <a href= \"main.html\" class=retourMain> Retourner à la page d'acceuil </a>";
+        document.getElementById("messageVerifAge").innerHTML= "<h1> Accès refusé </h1> <br> <p>Vous devez avoir 16 ans pour acheter de l'alcool en belgique. <br> <a href=\" https://www.ejustice.just.fgov.be/cgi_loi/loi_a.pl\" class=\"loi\" > Règles sur l'achat d'alcool en Belgique</a> </p>  <a href= \"main.html\" class=retourMain> Retourner à la page d'acceuil </a>";
         document.getElementById("formAge").innerHTML="";
     }
 
@@ -57,3 +62,14 @@ function afficherPanierTest() {
     }
     return false;
 }
+
+function creerTablePanier(){     // mis dans <script> car ne fonctionne pas
+    let clefs=Object.keys(panierCourse);
+    for(let i of clefs){
+        //let objet= panierCourse[i];
+        //let nombre=  panierCourse[i].nombre;
+        //let prix= panierCourse[i].prix;
+        document.getElementById("objetPanier").innerHTML+= "<tr> <td>panierCourse[i]</td> <td>panierCourse[i].nombre</td> <td>panierCourse[i].prix</td> </tr>";
+    }
+}
+

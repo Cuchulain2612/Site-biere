@@ -8,29 +8,29 @@ header{
 
 
 footer{
-    background-color: dimgrey;
+    background-color: dimgrey;   /* marche pas */
     clear: both;
 }
 
 div.hautPage{
-    background-color: darkred;
+    background-color: darkred;  /* marche pas bien */
 }
 
 img.logo{
-    width:15%;
-    border: 1px solid darkgray;
+    width:85px;
+    border: 2px solid rgb(41, 150, 74);
     float:left;
 
 }
 
 img.panier{
-    width: 5%;
+    width: 40px;
 }
 
 ul.navPrim li{
     display:inline;
     list-style-type: none;
-    font-size: 500%;     /* Verifier comment faire taille en fonction de la fenêtre */
+    font-size: 40px;     /* Verifier comment faire taille en fonction de la fenêtre */
     color:white;
     margin: 5px;
     
@@ -64,5 +64,20 @@ div.contact{
 div.main{
     clear: left;
 }
+
+.tableauPanier{
+    border: 1px solid black;
+    width: 50%;
+    position: relative;
+    left: 30%;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(22, 146, 43);
+}
+
+.tableauPanier td {
+    text-align: center;
+}
+
 
 /* à modifier et mettre au propre */ 
