@@ -4,12 +4,18 @@ body{
 
 header{
     background-color: dimgrey;
+    margin-bottom: 10px;
 }
 
 
 footer{
     background-color: dimgrey;   /* marche pas */
     clear: both;
+}
+
+span.footerInfo{
+    font-weight: bold;
+    font-size: 20px;
 }
 
 div.hautPage{
@@ -47,7 +53,9 @@ ul.navPrim a:link,ul.navPrim a:visited{
 
 div.navigation{
     float: left;
-    width: 80%;
+    position: absolute;
+    left: 95px;
+    width: 2000px;
     background-color: rgb(58, 156, 49);
 }
 
@@ -65,7 +73,7 @@ div.main{
     clear: left;
 }
 
-.tableauPanier{
+table.tableauPanier{
     border: 1px solid black;
     width: 50%;
     position: relative;
@@ -73,11 +81,32 @@ div.main{
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(22, 146, 43);
+    margin: 5px;
 }
+
+table.tableauPrixTotal{
+    border: 2px solid black;
+    width: 50%;
+    position: relative;
+    left: 30%;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(22, 146, 43);
+    margin: 5px;
+}
+
+
 
 .tableauPanier td {
     text-align: center;
 }
 
+tr.panierVide td{
+    color: darkred;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
 
 /* à modifier et mettre au propre */ 

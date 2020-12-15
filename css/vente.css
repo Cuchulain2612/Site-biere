@@ -12,6 +12,11 @@ footer{
     clear: both;
 }
 
+span.footerInfo{
+    font-weight: bold;
+    font-size: 20px;
+}
+
 div.hautPage{
     background-color: darkred;
 }
@@ -48,8 +53,10 @@ ul.navPrim a:link,ul.navPrim a:visited{
 
 div.navigation{
     float: left;
-    width: 80%;
-    background-color: rgb(173, 36, 36);
+    position: absolute;
+    left: 95px;
+    width: 3000px;
+    background-color: rgb(58, 156, 49);
 }
 
 main{
@@ -63,17 +70,23 @@ div.demandeAge{
     border: 3px solid black;
     text-align: center;
     padding: 10px ;
-    width: 40%;
+    width: 800px;
     background-color: darkred;
 }
 
 div.logoAge{
-    width: 15%;
+    width:15%;
+    height: 100px;
     padding: 0;
     border: 3px solid darkred;   /* problème pas aligné*/
     position: relative;
     top: 5px;
-    left: 43%;     /* verifier position avec padding et margin */
+    left: 42%;     /* verifier position avec padding et margin */
+    margin: 10px 0 30px 0;
+}
+
+div.logoAge img{
+    width: 100%;
 }
 
 a.loi{
