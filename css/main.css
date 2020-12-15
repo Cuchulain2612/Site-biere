@@ -1,5 +1,6 @@
 body{
     background-color:#49A94A;
+    margin: 0;
 }
 
 header{
@@ -7,10 +8,20 @@ header{
     margin-bottom: 10px;
 }
 
+main{
+    margin: 30px 0 100px 0;
+    padding: 30px 0 0 0;
+    clear: left;
+}
+
 
 footer{
-    background-color: dimgrey;   /* marche pas */
+    background-color: dimgrey;
     clear: both;
+    position: absolute;
+    top: 2170px;
+    width: 100%;
+    margin: 100px 0 0 0;
 }
 
 span.footerInfo{
@@ -23,14 +34,14 @@ div.hautPage{
 }
 
 img.logo{
-    width:85px;
-    border: 2px solid rgb(41, 150, 74);
+    width:90px;
+    border: 7px solid rgb(37, 136, 67);
     float:left;
-
+    border-radius: 10px;
 }
 
 img.panier{
-    width: 40px;
+    width: 30px;
 }
 
 ul.navPrim li{
@@ -54,19 +65,23 @@ ul.navPrim a:link,ul.navPrim a:visited{
 div.navigation{
     float: left;
     position: absolute;
-    left: 95px;
+    left: 98px;
     width: 2000px;
-    background-color: rgb(58, 156, 49);
+    background-color: rgb(37, 136, 67);
 }
 
 div.reseaux{
     float: right;
     width: 40%;
+    text-align: right;
+    padding: 0 20px 0 0;
 }
 
 div.contact{
     float: left;
     width: 40%;
+    text-align: left;
+    padding: 0 0 0 20px;
 }
 
 div.main{
@@ -96,9 +111,27 @@ table.tableauPrixTotal{
 }
 
 
-
 .tableauPanier td {
     text-align: center;
+    border: 1px solid black;
+}
+
+.tableauPrixTotal tr{
+    padding: 0;
+}
+
+.tableauPrixTotal th{
+    border: 2px solid black;
+    padding: 0;
+    text-align: left;
+    border-spacing: 0;
+}
+
+.tableauPrixTotal td{
+    border: 2px solid black;
+    padding: 0;
+    text-align: right;
+    border-spacing: 0;
 }
 
 tr.panierVide td{
@@ -108,5 +141,43 @@ tr.panierVide td{
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     text-align: center;
 }
+
+figure{
+    color: white;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img.personne{
+    width: 250px;
+
+}
+
+figcaption.nomPersonne{
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(4, 90, 11);
+    border-radius: 10px 30px;
+    padding: 5px 0 5px 15px;
+}
+
+div.equipe{
+    margin: 0 0 150px 0;
+}
+
+span.gras{
+    font-weight: bold;
+}
+
+.texte{
+    margin: 0 0 0 20px;
+    font-size: 20px;
+}
+
+
+
+
 
 /* à modifier et mettre au propre */ 

@@ -10,6 +10,7 @@ ATTENTION: problème de lecture dans Google Chrome (pour MAC)
 
 Problèmes à résoudre:
 - empecher un retour à la ligne dans la navigation  -> plus ou moins réglé (pas parfait)
+- problèmes de div imbriqués. En verifiant les ressources on a pas ce que j'ai tapé dans mon fichier HTML
 
 
 ATTENTION: remettre au propre et de manière plus lisible.

@@ -85,7 +85,7 @@ function creerTablePanier(){     // mis dans <script> car ne fonctionne pas avec
 
     document.getElementById("objetPanier").innerHTML+= texteTab;
     document.getElementById("sousTotal").innerHTML+= "<td>" +sousTot+ "€ </td>";
-    document.getElementById("total").innerHTML+= (sousTot*1.21).toFixed(2)+"€";   // essayer de faire d'une autre manière? Utiliser map?
+    document.getElementById("total").innerHTML+= "<td>"+ (sousTot*1.21).toFixed(2)+"€ </td>";   // essayer de faire d'une autre manière? Utiliser map?
 }
 
 function mettrePanierCookie() {

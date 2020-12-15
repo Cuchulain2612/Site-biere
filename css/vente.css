@@ -1,15 +1,23 @@
 body{
     background-color:lightcoral;
+    margin: 0;
 }
 
 header{
     background-color: dimgrey;
 }
 
+main{
+    margin: 30px 0 100px 0;
+    float: left;
+}
 
 footer{
     background-color: dimgrey;
     clear: both;
+    position: absolute;
+    top: 2170px;
+    width: 100%;
 }
 
 span.footerInfo{
@@ -22,20 +30,20 @@ div.hautPage{
 }
 
 img.logo{
-    width:15%;
-    border: 1px solid darkgray;
+    width:90px;
+    border: 7px solid rgb(185, 55, 32);
     float:left;
-
+    border-radius: 10px;
 }
 
 img.panier{
-    width: 5%;
+    width: 30px;
 }
 
 ul.navPrim li{
     display:inline;
     list-style-type: none;
-    font-size: 500%;     /* Verifier comment faire taille en fonction de la fenêtre */
+    font-size: 40px;     
     color:white;
     margin: 5px;
     
@@ -54,9 +62,9 @@ ul.navPrim a:link,ul.navPrim a:visited{
 div.navigation{
     float: left;
     position: absolute;
-    left: 95px;
+    left: 98px;
     width: 3000px;
-    background-color: rgb(58, 156, 49);
+    background-color: rgb(185, 55, 32);
 }
 
 main{
@@ -104,14 +112,30 @@ a:link.retourMain, a:visited.retourMain{
 
 a.lienBeer{
     text-decoration: none;
-    font-size: 200%;     /* attention ne s'adapte pas !!!! */
+    font-size: 200%;     
     color: white;
     font-weight: 400;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
 
+div.boutonVersPanier{
+position: absolute;
+left: 35%;
+top: 1980px;
+}
 
+button.versPanier{
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    padding: 0 6px 0 6px;
+    margin: 0 0 0 10px;
+    color: white;
+    background-color: rgb(168, 60, 60);
+    font-size: 200%;
+    
+}
 
 
 
@@ -136,25 +160,36 @@ button.plusMoins{
     color: white;
     background-color: rgb(168, 60, 60);
     font-size: 200%;
+    border: 3px solid darkred;
     
 }
 
-figcaption{
+figcaption.titreBiere{
     margin-top: 10px;
     padding: 5px;
+    font-size: 180%;     /* attention ne s'adapte pas !!!! */
+    color: white;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
 
 div.reseaux{
     float: right;
     width: 40%;
+    text-align: right;
+    padding: 0 20px 0 0;
 }
 
 div.contact{
     float: left;
     width: 40%;
+    text-align: left;
+    padding: 0 0 0 20px;
 }
-
-
+.texte{
+    margin: 0 0 0 20px;
+}
 
 
 
