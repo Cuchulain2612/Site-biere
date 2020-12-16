@@ -18,9 +18,8 @@ main{
 footer{
     background-color: dimgrey;
     clear: both;
-    position: absolute;
-    top: 2170px;
     width: 100%;
+    height: 200px;
     margin: 100px 0 0 0;
 }
 
@@ -150,7 +149,7 @@ figure{
 
 img.personne{
     width: 250px;
-
+    float: left;
 }
 
 figcaption.nomPersonne{
@@ -161,10 +160,71 @@ figcaption.nomPersonne{
     background-color: rgb(4, 90, 11);
     border-radius: 10px 30px;
     padding: 5px 0 5px 15px;
+    clear: left;     /* Mettre clear left qu'il soit affiché en dessous de l'image et qu'elle n'empiète pas*/
+}
+
+a.lienInText{
+    text-decoration: none;
+    color: darkslateblue;
+    font-weight: bold;
 }
 
 div.equipe{
     margin: 0 0 150px 0;
+}
+
+iframe.map{
+    border: 5px solid rgb(4, 90, 11) ;
+    border-radius: 1% / 1%;
+    width: 60%;
+    margin: 20px 0 20px 0;
+}
+
+
+div.nosBieres{
+    margin: 40px 0 40px 0;
+    color: white;
+
+}
+
+div.uneBiere img{
+    width: 40%;
+    /*float: left;*/    /* Ne marche pas très bien... -> mieux vaut ne pas mettre pour le moment*/
+    border: 5px solid rgb(4, 90, 11) ;
+    border-radius: 1% / 1%;
+}
+
+div.uneBiere p{
+    font-size: 30px;
+}
+
+div.uneBiere h3{
+    font-size: 40px;
+    margin: 20px 0 20px 0;
+}
+
+form.contact{
+    margin: 40px 0 0 30px;
+    padding: 10px;
+    border: 5px solid rgb(4, 90, 11) ;
+    border-radius: 1% / 1%;
+    width: 40%;
+}
+
+.formContact{
+    margin: 10px 0 0 0;
+}
+
+textarea.formContact{
+    width: 100%;
+    height: 100px;
+}
+
+p.reponseContact{
+    color: rgb(4, 90, 11);
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
 }
 
 span.gras{

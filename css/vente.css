@@ -12,12 +12,12 @@ main{
     float: left;
 }
 
-footer{
+footer{       /* position: absolute; bottom:0;    -> Tout en bas ?????*/
     background-color: dimgrey;
     clear: both;
-    position: absolute;
-    top: 2170px;
     width: 100%;
+    height: 200px;
+    margin: 100px 0 0 0;
 }
 
 span.footerInfo{
@@ -34,6 +34,12 @@ img.logo{
     border: 7px solid rgb(185, 55, 32);
     float:left;
     border-radius: 10px;
+}
+
+img.stop{
+    border: 5px solid rgb(95, 4, 4);
+    border-radius: 1% / 1%;
+    width: 100%;
 }
 
 img.panier{
@@ -86,16 +92,13 @@ div.logoAge{
     width:15%;
     height: 100px;
     padding: 0;
-    border: 3px solid darkred;   /* problème pas aligné*/
     position: relative;
     top: 5px;
     left: 42%;     /* verifier position avec padding et margin */
-    margin: 10px 0 30px 0;
+    margin: 10px 0 40px 0;
 }
 
-div.logoAge img{
-    width: 100%;
-}
+
 
 a.loi{
     font-size: 20px;
@@ -120,14 +123,15 @@ a.lienBeer{
 }
 
 div.boutonVersPanier{
-position: absolute;
-left: 35%;
-top: 1980px;
+    position: absolute;   /* relative -> pose des problèmes pour cliquer sur les boutons + ou - */  
+    left: 25%;
+    top: 1970px;
+    margin: 30px 0 0 0;
 }
 
 button.versPanier{
-    width: 500px;
-    height: 100px;
+    width: 300%;
+    height: 80px;
     text-align: center;
     padding: 0 6px 0 6px;
     margin: 0 0 0 10px;

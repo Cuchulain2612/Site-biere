@@ -16,6 +16,12 @@ var panierCourse={
 
 var nomBiere={beer1:"Première bière",beer2:"Deuxième bière",beer3:"Troisième bière",beer4:"Quatrième bière",}
 
+/**
+ * Récupère la date de naissance introduite dans un formulaire et verifie si la personne a 16 ans (et plus) ou pas
+ * -> Envoie vers la page venteBieres.html si la personne est assez agée
+ * -> Sinon: change le DOM et affiche que l'accès lui est interdit et mets un lien vers la page d'acceuil
+ *  
+ */
 function verifAge() {
     let naissance=document.getElementById("dateNaissance").value;    // on récupères un ISOString qu'on transforme en dte à la prochaine ligne
     let age= new Date()- new Date(naissance);   // résultat en millisecondes
@@ -27,12 +33,12 @@ function verifAge() {
         console.log("Accès autorisé");
     }
     else{
-        document.getElementById("messageVerifAge").innerHTML= "<h1> Accès refusé </h1> <br> <p>Vous devez avoir 16 ans pour acheter de l'alcool en belgique. <br> <a href=\" https://www.ejustice.just.fgov.be/cgi_loi/loi_a.pl\" class=\"loi\" > Règles sur l'achat d'alcool en Belgique</a> </p>  <a href= \"main.html\" class=retourMain> Retourner à la page d'acceuil </a>";
+        document.getElementById("messageVerifAge").innerHTML= "<h1> Accès refusé </h1> <br> <p>Vous devez avoir 16 ans pour acheter de l'alcool en belgique. <br> <a href=\" https://www.ejustice.just.fgov.be/\" class=\"loi\" > Règles sur l'achat d'alcool en Belgique</a> </p>  <a href= \"main.html\" class=retourMain> Retourner à la page d'acceuil </a>";
         document.getElementById("formAge").innerHTML="";
         console.log("Accès restreint");
     }
 
-    return false
+    return false;
 }
 
 
@@ -61,7 +67,10 @@ function retirerPanier(beer){
 }
 
 
-
+/**
+ * A partir du panier récupéré dans les cookies modifie la DOM et affiche dans un tableau notre list de course.
+ * Affiche aussi un tableau avec le prix sans et avec TVA.
+ */
 function creerTablePanier(){     // mis dans <script> car ne fonctionne pas avec onload
     var clefs=Object.keys(cookieToObjetPanier());
     var panierCourseFin=cookieToObjetPanier();
@@ -88,6 +97,10 @@ function creerTablePanier(){     // mis dans <script> car ne fonctionne pas avec
     document.getElementById("total").innerHTML+= "<td>"+ (sousTot*1.21).toFixed(2)+"€ </td>";   // essayer de faire d'une autre manière? Utiliser map?
 }
 
+/**
+ * Récupères le nombre de chaque bière dans la variable panier et en crée des cookies
+ * 
+ */
 function mettrePanierCookie() {
     var dateDeleteCookie= new Date() + 120000;    //limité à deux minutes pour le moment
     var clefs=Object.keys(panierCourse);
@@ -100,6 +113,10 @@ function mettrePanierCookie() {
     
 }
 
+/**
+ * Lis les cookies et crée un objet équuivalent à panier (avant qu'il soit envoyé dans les cookies)
+ * Renvoie cet objet.
+ */
 function cookieToObjetPanier() {    // objet final
     var listeCookie=document.cookie.split(";"); // on transforme le string en array
     var listeCookieTest= listeCookie.map(function(elem) { return elem.slice(1,6)})   // on crée un array avec les string raccourcis   ATTENTION: fonction de map -> besoin d'un return
@@ -123,7 +140,24 @@ function cookieToObjetPanier() {    // objet final
     return panierCourseFromCookie;
 }
 
+/**
+ * Récupère les valeures dans le formulaire de contact et mets les valeurs dans un objet demande à envoyer quelque part d'autre
+ * Modifie la DOM et affiche un message comme quoi la demande a été envoyée (ce n'est pas le cas pour le moment -> manque de connaissances)
+ */
+function getDemande() {
+    var demande={    // à envoyer à un serveur, etc.
+        nom:"",
+        email:"",
+        texte:"",}
 
+    demande.nom= document.getElementById("nom").value;
+    demande.email= document.getElementById("email").value;
+    demande.texte= document.getElementById("demande").value;
+
+    document.getElementById("contact").innerHTML= "<p class=\"reponseContact\"> Votre demande de contact a été envoyé. </p>";
+
+    return false;
+}
 
 
 // POSSIBILITE: faire un split avec ; et un espace
