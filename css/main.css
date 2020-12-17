@@ -60,12 +60,16 @@ ul.navPrim a:link,ul.navPrim a:visited{
     border: 3px solid rgb(8, 117, 5);
 }
 
+ul.navPrim a:hover{
+    background-color:  rgb(19, 179, 13);
+}
+
 
 div.navigation{
     float: left;
     position: absolute;
     left: 98px;
-    width: 2000px;
+    width: 850px;
     background-color: rgb(37, 136, 67);
 }
 
@@ -143,12 +147,12 @@ tr.panierVide td{
 
 figure{
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 img.personne{
-    width: 250px;
+    width: 180px;
     float: left;
 }
 
@@ -195,11 +199,11 @@ div.uneBiere img{
 }
 
 div.uneBiere p{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 div.uneBiere h3{
-    font-size: 40px;
+    font-size: 30px;
     margin: 20px 0 20px 0;
 }
 
